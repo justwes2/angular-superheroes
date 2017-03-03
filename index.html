@@ -1,12 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app= "phonebookApp">
 <head>
   <meta charset="UTF-8">
   <title>Superhero Phone Book</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body ng-controller= "phonebookCtrl as vm">
+  <!-- <div ng-repeat='hero in vm.heros'>
+    <p>{{$index + 1}}. {{hero.name}}-{{hero.phoneNumber}}-{{hero.team}} <img ng-src=
+      '{{hero.image}}'/><p>
+  </div> -->
+  <h1>Oracle Database</h1>
+  <div class="viewscreen">
 
+    <!-- <img ng-repeat="heroImage in heroImages track by $index" ng-src="{{heroImage}}" /> -->
+  </div>
+
+
+  <div>
+    <label>Search:<input type="text" ng-model="searchText"></label>
+  </div>
+  <div>
+    <table id='searchObjResults'>
+      <tr><th>Name</th><th>Phone Number</th><th>Team</th><th>Image</th></tr>
+      <tr ng-repeat="heroObj in vm.heros | filter:searchText" ng-class=" {'auth': heroObj.team == 'Authority', 'birds': heroObj.team == 'Birds of Prey', 'spyral': heroObj.team == 'Spyral', 'avengers': heroObj.team == 'Avengers', 'young': heroObj.team == 'Young Avengers'}">
+        <td>{{heroObj.name}}</td>
+        <td>{{heroObj.phoneNumber}}</td>
+        <td>{{heroObj.team}}</td>
+        <td><div class="overflow"><img ng-show="vm.seeImage[$index]" ng-src="{{heroObj.image}}"/></div></td>
+        <td><button ng-click='vm.seeImage[$index]= !vm.seeImage[$index]'>See Image</button></td>
+      </tr>
+    </table>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

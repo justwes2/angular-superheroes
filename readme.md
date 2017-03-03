@@ -16,14 +16,14 @@ Fork and clone this repository. You will be working in the provided three files:
 
 To complete this assignment, you'll need to complete the following steps:
 
-  1. Bootstrap your angular application (i.e., create a module, use `ng-app`).
-  2. Create a controller.
-  3. Attach a controller to your view.
-  4. Define a collection of superheroes in your `app.js`. Each superhero should have a name, phone number, comics affiliation and image URL.
-  5. Use `ng-repeat` to render the list of superheroes.
-  6. Create a search form. Use `ng-model` to bind that form's input to a value in the view model.
-  7. Use `filter` to limit the number of superheroes shown in the browser based on user input
-  8. Use `ng-class` to add a class to each superhero in the list indicating their comics affiliation (e.g., `ng-class="marvel"`). Use that class to color code the list depending on their affiliation (e.g., all Marvel heroes should appear as blue).
+  X1. Bootstrap your angular application (i.e., create a module, use `ng-app`).
+  X2. Create a controller.
+  X3. Attach a controller to your view.
+  X4. Define a collection of superheroes in your `app.js`. Each superhero should have a name, phone number, comics affiliation and image URL.
+  X5. Use `ng-repeat` to render the list of superheroes.
+  X6. Create a search form. Use `ng-model` to bind that form's input to a value in the view model.
+  X7. Use `filter` to limit the number of superheroes shown in the browser based on user input
+  X8. Use `ng-class` to add a class to each superhero in the list indicating their comics affiliation (e.g., `ng-class="marvel"`). Use that class to color code the list depending on their affiliation (e.g., all Marvel heroes should appear as blue).
   9. Add a button next to each superhero. When clicked, their image should appear within their listing (hint: use `$index`).
 
 ## Resources
